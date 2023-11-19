@@ -30,6 +30,6 @@ public class TableModel implements Model {
                 return reservation.getId();
             }
         }
-    throw  new RuntimeException("Некоректный номер столика.");
+        throw  new RuntimeException("Некоректный номер столика.");
     }
 }

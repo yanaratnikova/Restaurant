@@ -19,7 +19,7 @@ public class BookingView implements View {
     }
 
     @Override
-    public void showSeservationTableResalt(int reservationNo) {
+    public void showReservationTableResult(int reservationNo) {
         if (reservationNo>0){
             System.out.printf("Столик успешно забронированю Номер номер резерва : #%d\n", reservationNo);
         }
@@ -30,8 +30,16 @@ public class BookingView implements View {
 
     @Override
     public void registerObserver(ViewObserver observer) {
+        observers.add(observer);
 
     }
+
+    /**
+     * Действие клиента(пользователь нажал на кнопкубронирования), бронирование столика
+     * @param orderData
+     * @param tableNo
+     * @param name
+     */
 
     public void reservationTable(Date orderData, int tableNo, String name){
         System.out.println("Возбуждается событие бронирования столика");

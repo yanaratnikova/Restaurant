@@ -23,10 +23,10 @@ public class BookingPresenter implements ViewObserver{
         System.out.println("Презентер реагирует на событие");
         try {
             int reservationNo = model.reservationTable(orderData, tableNo, name);
-            view.showSeservationTableResalt(reservationNo);
+            view.showReservationTableResult(reservationNo);
         }
         catch (RuntimeException e){
-            view.showSeservationTableResalt(-1);
+            view.showReservationTableResult(-1);
         }
     }
 }

@@ -6,6 +6,6 @@ import java.util.Collection;
 
 public interface View {
     void showTables(Collection<Table> tables);
-    void showSeservationTableResalt(int reservationNo);
+    void showReservationTableResult(int reservationNo);
     void  registerObserver(ViewObserver observer);
 }
